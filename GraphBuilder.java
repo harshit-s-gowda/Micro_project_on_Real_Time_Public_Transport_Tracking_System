@@ -1,0 +1,54 @@
+public class GraphBuilder {
+    public static TransportGraph buildBengaluruNetwork() {
+        TransportGraph g=new TransportGraph();
+        g.addStop(new BusStop("MJ","Majestic (KSRTC)",12.9767,77.5713));
+        g.addStop(new BusStop("SL","Silk Board",12.9175,77.6233));
+        g.addStop(new BusStop("KR","Koramangala",12.9352,77.6245));
+        g.addStop(new BusStop("EC","Electronic City",12.8399,77.6770));
+        g.addStop(new BusStop("IN","Indiranagar",12.9784,77.6408));
+        g.addStop(new BusStop("WH","Whitefield",12.9698,77.7499));
+        g.addStop(new BusStop("JP","Jayanagar",12.9251,77.5837));
+        g.addStop(new BusStop("BS","Banashankari",12.9257,77.5476));
+        g.addStop(new BusStop("MR","Marathahalli",12.9591,77.6974));
+        g.addStop(new BusStop("YV","Yeshwanthpur",13.0275,77.5506));
+        g.addStop(new BusStop("HB","Hebbal",13.0354,77.5956));
+        g.addStop(new BusStop("OMR","Old Madras Road",13.0052,77.6524));
+        g.addStop(new BusStop("NR","Nagarbhavi",12.9577,77.5106));
+        g.addStop(new BusStop("BTM","BTM Layout",12.9165,77.6101));
+        g.addStop(new BusStop("HSR","HSR Layout",12.9116,77.6474));
+        g.addStop(new BusStop("BNG","Bannerghatta Road",12.8876,77.5974));
+        g.addStop(new BusStop("KNP","Kanakapura Road",12.8938,77.5759));
+        g.addStop(new BusStop("AIR","Kempegowda Airport",13.1986,77.7066));
+        g.addBidirectionalEdge("MJ","JP",18,"Route-1");
+        g.addBidirectionalEdge("MJ","YV",15,"Route-2");
+        g.addBidirectionalEdge("MJ","BS",20,"Route-3");
+        g.addBidirectionalEdge("MJ","KR",25,"Route-4");
+        g.addBidirectionalEdge("MJ","IN",30,"Route-5");
+        g.addBidirectionalEdge("MJ","NR",22,"Route-6");
+        g.addBidirectionalEdge("JP","BS",8,"Route-7");
+        g.addBidirectionalEdge("JP","BTM",15,"Route-8");
+        g.addBidirectionalEdge("JP","KR",20,"Route-9");
+        g.addBidirectionalEdge("BS","BNG",18,"Route-10");
+        g.addBidirectionalEdge("BS","KNP",20,"Route-11");
+        g.addBidirectionalEdge("BTM","SL",10,"Route-12");
+        g.addBidirectionalEdge("BTM","HSR",12,"Route-13");
+        g.addBidirectionalEdge("BTM","KR",8,"Route-14");
+        g.addBidirectionalEdge("BNG","KNP",15,"Route-15");
+        g.addBidirectionalEdge("KR","SL",12,"Route-16");
+        g.addBidirectionalEdge("HSR","SL",8,"Route-17");
+        g.addBidirectionalEdge("HSR","EC",20,"Route-18");
+        g.addBidirectionalEdge("SL","EC",25,"Route-19");
+        g.addBidirectionalEdge("IN","MR",20,"Route-20");
+        g.addBidirectionalEdge("IN","WH",45,"Route-21");
+        g.addBidirectionalEdge("MR","WH",25,"Route-22");
+        g.addBidirectionalEdge("IN","OMR",15,"Route-23");
+        g.addBidirectionalEdge("YV","HB",18,"Route-24");
+        g.addBidirectionalEdge("HB","AIR",55,"Route-25");
+        g.addBidirectionalEdge("YV","NR",25,"Route-26");
+        g.addBidirectionalEdge("OMR","WH",30,"Route-27");
+        g.addBidirectionalEdge("HB","OMR",20,"Route-28");
+        g.addBidirectionalEdge("EC","BNG",15,"Route-29");
+        g.addBidirectionalEdge("NR","BS",18,"Route-30");
+        return g;
+    }
+}
